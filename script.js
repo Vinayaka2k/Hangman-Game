@@ -7,11 +7,17 @@ const popupContainer = document.getElementById('popup-container');
 const notification = document.getElementById("notification-container")
 const playAgainBtn = document.getElementById('play-button');
 
-const words = ['application', 'programming', 'interface', 'wizard'];
+import generateRandomWord from './node_modules/random-words/index.js';
+let selectedWord = '';
+
+selectedWord = generateRandomWord();
+console.log(selectedWord);
+
+/*const words = ['application', 'programming', 'interface', 'wizard'];
 let selectedWord = words[Math.floor(Math.random() * words.length)];
+*/
 let playable = true;
 
-console.log(selectedWord);
 
 const correctLetters = [];
 const wrongLetters = [];
@@ -95,7 +101,8 @@ playAgainBtn.addEventListener('click', () => {
         playable = true;
         correctLetters.splice(0);
         wrongLetters.splice(0);
-        selectedWord = words[Math.floor(Math.random() * words.length)];
+        selectedWord = generateRandomWord();
+        console.log(selectedWord);
         displayWord();
         updateWrongLettersElement();
         popupContainer.style.display = 'none';

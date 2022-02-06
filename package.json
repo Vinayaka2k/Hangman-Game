@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Vinayaka2k/Hangman-Game/issues"
   },
-  "homepage": "https://github.com/Vinayaka2k/Hangman-Game#readme"
+  "homepage": "https://github.com/Vinayaka2k/Hangman-Game#readme",
+  "dependencies": {
+    "random-words": "^1.1.2"
+  }
 }
